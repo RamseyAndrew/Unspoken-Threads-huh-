@@ -373,3 +373,17 @@ p {
 .controls button:hover {
   background: #7a5630;
 }
+
+.poem-image-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.poem-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+}
