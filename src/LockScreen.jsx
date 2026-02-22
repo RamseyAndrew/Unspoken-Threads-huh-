@@ -36,11 +36,11 @@ export default function LockScreen({ onUnlock }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // if (!isOpen) {
-    //   setShowWait(true);
-    //   setTimeout(() => setShowWait(false), 10000);
-    //   return;
-    // }
+    if (!isOpen) {
+      setShowWait(true);
+      setTimeout(() => setShowWait(false), 10000);
+      return;
+    }
     if (input.trim() === "Bible") {
       setError("");
       onUnlock();

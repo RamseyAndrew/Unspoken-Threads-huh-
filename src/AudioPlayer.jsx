@@ -26,7 +26,9 @@ export default function AudioPlayer() {
     if (playing) {
       audio.pause();
     } else {
-      audio.play();
+      audio.play().catch(err => {
+        console.error("Playback failed:", err);
+      });
     }
     setPlaying(!playing);
   };
@@ -51,7 +53,8 @@ export default function AudioPlayer() {
 
   return (
     <div className="audio-player">
-      <audio ref={audioRef} src="/Djo%20-%20End%20Of%20Beginning%20(Official%20Audio)%20-%20Djo%20Music.mp3" preload="auto" />
+      {/* File is now in public/, so just reference it by name */}
+      <audio ref={audioRef} src="/end-of-beginning.mp3" preload="auto" />
       <div className="audio-controls">
         <button className="audio-btn" onClick={() => skip(-10)}>&#9664;&#9664;</button>
         <button className="audio-btn playpause" onClick={togglePlay}>{playing ? "||" : "▶"}</button>
