@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Lobster&display=swap');
+
+
+
+/* Lockscreen styles */
+.lockscreen-bg {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: inherit;
+}
+.lockscreen-card {
+  background: rgba(243, 233, 210, 0.35);
+  border-radius: 30px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6), inset 0 0 40px rgba(0,0,0,0.15);
+  padding: 2.5rem 2rem 1.5rem 2rem;
+  max-width: 350px;
+  width: 95vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  backdrop-filter: blur(8px);
+  animation: fadeIn 1.5s ease forwards, paperSway 18s ease-in-out infinite;
+}
+.lockscreen-timer {
+  font-size: 1.3rem;
+  margin-bottom: 1.2rem;
+  color: #5a3e1b;
+  font-family: "Inter", sans-serif;
+}
+.lockscreen-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.lockscreen-input {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #bfa77a;
+  font-size: 1.1rem;
+  width: 100%;
+  background: #f3e9d2;
+  color: #3b2f1c;
+  outline: none;
+}
+.lockscreen-btn {
+  background: #5a3e1b;
+  color: #f3e9d2;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1.2rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-family: "Cookie", cursive;
+  transition: background 0.2s;
+}
+.lockscreen-btn:hover {
+  background: #7a5630;
+}
+.lockscreen-error {
+  color: #b30000;
+  margin-bottom: 0.5rem;
+  font-size: 3rem;
+}
+.lockscreen-popup {
+  background: #fffbe6;
+  color: #5a3e1b;
+  border-radius: 12px;
+  padding: 0.7rem 1.2rem;
+  font-size: 1.1rem;
+  margin-bottom: 0.7rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  font-family: "Cookie", cursive;
+  animation: fadeIn 0.5s;
+}
+.lockscreen-wait {
+  color: #7a5630;
+  font-size: 1rem;
+  margin-bottom: 0.7rem;
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .lockscreen-card {
+    padding: 1.2rem 0.5rem 1rem 0.5rem;
+    max-width: 99vw;
+  }
+  .lockscreen-timer {
+    font-size: 1.1rem;
+  }
+  .lockscreen-input {
+    font-size: 1rem;
+  }
+  .lockscreen-btn {
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Lobster&display=swap');
+
+
+/* Custom audio player styles */
+.audio-player {
+  margin: 2rem auto 0 auto;
+  padding: 1rem 1.5rem;
+  border-radius: 16px;
+  background: rgba(243, 233, 210, 0);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  backdrop-filter: blur(2px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 420px;
+}
+.audio-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-bottom: 1rem;
+}
+.audio-btn {
+  background: #db9c4f12;
+  color: #f3e9d2;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: background 0.2s;
+}
+.audio-btn:hover {
+  background: #7a5630;
+}
+.audio-btn.playpause {
+  font-size: 2rem;
+  width: 60px;
+  height: 60px;
+}
+.audio-seek {
+  width: 100%;
+  max-width: 320px;
+  margin-bottom: 0.5rem;
+  accent-color: #5a3e1b;
+}
+@media (max-width: 600px) {
+  .audio-player {
+    padding: 0.7rem 0.5rem;
+    max-width: 98vw;
+  }
+  .audio-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 1.1rem;
+  }
+  .audio-btn.playpause {
+    width: 44px;
+    height: 44px;
+    font-size: 1.5rem;
+  }
+  .audio-seek {
+    max-width: 90vw;
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  .card {
+    max-width: 95vw;
+    padding: 1.2rem;
+    border-radius: 16px;
+  }
+  h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.7rem;
+  }
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+  .controls {
+    flex-direction: column;
+    gap: 0.7rem;
+    margin-top: 1.2rem;
+  }
+  .controls button {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    width: 100%;
+  }
+}
+
+
+/* Flipbook page container */
+.poem-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(circle at top, #1b1b2f, #0f0f18);
+  font-family: "Inter", sans-serif;
+  color: #f1f1f1;
+  background-image:
+    url("https://images.unsplash.com/photo-1521033719794-41049d18b8d4?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  }
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.card {
+  max-width: 800px;
+  border-radius: 30px;
+  padding: 3rem;
+  background: #f3e9d21a;
+  color: #3b2f1c;
+
+  border: 1px solid rgba(90, 70, 40, 0.4);
+
+  /* background-image:
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.4), transparent 60%),
+    url("https://www.transparenttextures.com/patterns/paper.png"); */
+
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.6),
+    inset 0 0 40px rgba(0, 0, 0, 0.15);
+
+  backdrop-filter: blur(2px);
+
+  animation: fadeIn 1.5s ease forwards, paperSway 18s ease-in-out infinite;
+}
+
+h1{
+  font-family: "Cookie", cursive;
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  color: #5a3e1b;
+}
+p {
+  font-family: "Lobster", cursive;
+  font-size: 2.0rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  opacity: 100;
+  animation: slideUp 1s ease forwards;
+  color: #4b3a24;
+  text-align: center;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes paperSway {
+  0% {
+    transform: rotate(-0.4deg) translateY(0px);
+  }
+
+  50% {
+    transform: rotate(0.4deg) translateY(-4px);
+  }
+
+  100% {
+    transform: rotate(-0.4deg) translateY(0px);
+  }
+}
+
+/* Flip left (next) */
+.page.flip-left {
+  animation: pageFlipLeft 0.8s cubic-bezier(0.77,0.2,0.2,1) forwards;
+  transform-origin: left center;
+}
+/* Flip right (prev) */
+.page.flip-right {
+  animation: pageFlipRight 0.8s cubic-bezier(0.77,0.2,0.2,1) forwards;
+  transform-origin: right center;
+  margin-bottom: 2.5rem;
+}
+
+@keyframes pageFlipLeft {
+  from {
+    transform: rotateY(90deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes pageFlipRight {
+  from {
+    transform: rotateY(-90deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes pageFlip {
+  from {
+    transform: rotateY(90deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.controls button {
+  background: #5a3e1b;
+  color: #f3e9d2;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: "Cookie", cursive;
+  font-size: 1.2rem;
+}
+
+.controls button:hover {
+  background: #7a5630;
+}
